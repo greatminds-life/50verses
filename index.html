@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <body>
+            <script type="text/javascript">
+                window.onload = function() {
+                    var total = getNumberOfWeek()-1;
+                    var week = getNumberOfWeek();
+                    document.getElementById('imageBox').src = './img/K' + total + '.jpg';
+                    document.getElementById('imageBox2').src = './img/E' + total + '.jpg';
+
+                };
+
+
+                function getNumberOfWeek() {
+                    const today = new Date();
+                    const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
+                    const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
+                return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+                }
+
+
+            </script>
+
+       
+            <span>
+                <img src ="" id="imageBox"  style = "display:block; margin-left:auto; margin-right: auto; margin-top:40px;" />
+            </span>
+
+        </body>
+    </head>
+
+</html>
