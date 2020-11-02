@@ -6,8 +6,7 @@
         <body>
             <script type="text/javascript">
                 window.onload = function() {
-                    var total = getNumberOfWeek();
-                    var week = getNumberOfWeek();
+                    var total = getNumberOfWeek()-1;
                     document.getElementById('imageBox').src = './img/K' + total + '.jpg';
                     document.getElementById('imageBox2').src = './img/E' + total + '.jpg';
 
@@ -20,14 +19,7 @@
                     const today = new Date();
                     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
                     const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
-                    const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
-
-
-
-                    console.log(firstDayOfYear);
-                    console.log(pastDaysOfYear);
-                    console.log(weekNum);
-                    console.log(today);
+                    const weekNum = Math.floor((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
                 return weekNum
                 }
 
