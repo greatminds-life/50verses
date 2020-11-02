@@ -21,7 +21,13 @@
                     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
                     const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
                     const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
-                    console.log(weekNum);
+
+                    const testDate = today.setDate(7);
+                    const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
+                    const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
+                    const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+
+                    console.log('weekNum',weekNum);
                 return weekNum
                 }
 
