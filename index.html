@@ -19,7 +19,7 @@
                     const today = new Date();
                     const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
                     const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
-                    const weekNum = Math.floor((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+                    const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay()) / 7);
                 return weekNum
                 }
 
