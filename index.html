@@ -23,11 +23,8 @@
                     const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
 
                     const testDate = today.setDate(7);
-                    const first = new Date(testDate.getFullYear(), 0, 1);
-                    const past = (testDate - first) / 86400000;
-                    const testNum = Math.ceil((past + first.getDay() + 1) / 7);
 
-                    console.log('weekNum',testNum);
+                    console.log(testDate);
 
                 return weekNum
                 }
