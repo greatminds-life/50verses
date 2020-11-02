@@ -25,10 +25,10 @@
                     const testDate = today.setDate(7);
                     const first = new Date(testDate.getFullYear(), 0, 1);
                     const past = (testDate - first) / 86400000;
-                    const weekNum = Math.ceil((past + first.getDay() + 1) / 7);
+                    const testNum = Math.ceil((past + first.getDay() + 1) / 7);
 
-                    console.log('weekNum',weekNum);
-                    
+                    console.log('weekNum',testNum);
+
                 return weekNum
                 }
 
