@@ -22,11 +22,12 @@
                     const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
                     const weekNum = Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
 
-                    const testDate = today.setDate(7);
 
-                    console.log(testDate);
+
+                    console.log(firstDayOfYear);
+                    console.log(pastDaysOfYear);
+                    console.log(weekNum);
                     console.log(today);
-
                 return weekNum
                 }
 
